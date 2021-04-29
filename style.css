@@ -1,3 +1,70 @@
+@font-face{
+	font-family: 'Mondwest';
+	src: url('Mondwest/Mondwest-Regular.woff') format('woff'),
+		url('Mondwest-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'NeueBit';
+	src: url('NeueBit/NeueBit-Bold.woff') format('woff'),
+		url('NeueBit-Bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+#mydiv {
+  box-shadow: 5px 5px 5px grey;
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+#mydivheader {
+  font-family: NeueBit;
+  font-size: 50px;
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #D1CECE;
+  color: black;
+  border: 2px solid black;
+}
 body {
     background-color: #D6D6D6;
+    text-align:center;
+    margin:auto;
   }
+  h1{
+    font-family: Mondwest;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+button{
+  box-shadow: 10px 10px 5px grey;
+  font-family: Mondwest;
+  font-size: 100px;
+  margin-top: 15px;
+  text-align: center;
+
+}
+#clearDrawing{
+  box-shadow: 2px 2px 2px grey;
+  font-size: 20px;
+  font-family: NeueBit;
+}
+.grid-container{
+  box-shadow: 10px 10px 5px grey;
+  background-color: white;
+  margin:auto;
+  display:grid;
+  width: 700px;
+  height: 400px;
+  grid-template-columns: repeat(65, 1fr);
+  grid-template-rows: repeat(47, 1fr);
+}
+/* .pixel:hover{
+  background-color: yellow;
+} */
