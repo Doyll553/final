@@ -1,6 +1,5 @@
 console.log("hi");
 
-
 //finding grid container//
 
 let container = document.querySelector(".grid-container");
@@ -35,7 +34,7 @@ for (let i = 0; i < 100 * 100; i++){
         });
 
         clearDrawing.addEventListener("click", function(){
-            newDiv.style.background = "white";
+            newDiv.style.background = "rgba(0,0,0,0)";
           })
 
     container.appendChild(newDiv);
@@ -77,3 +76,40 @@ function dragElement(elmnt) {
   }
 }
 
+let feedHim = document.querySelector(".feed_him");
+
+let tryAgain = document.querySelector(".try_again");
+
+let toolBox = document.querySelector("#mydivheader");
+
+let header = document.querySelector(".header");
+
+let horse = document.querySelector(".horse");
+
+let isDone = false;
+
+  feedHim.addEventListener("click",
+    function(){
+      feedHim.style.display= "none";
+      tryAgain.style.display = "block";
+      toolBox.style.display = "none";
+      header.style.display = "none";
+      horse.style.display = "block";
+
+      container.style.backgroundColor = "rgba(0,0,0,0)";
+
+      container.style.transform = "scale(0.15) translate(-1800px, 820px)";
+      container.style.boxShadow = "none";
+    })
+
+    tryAgain.addEventListener("click",
+      function(){
+        feedHim.style.display= "block";
+        toolBox.style.display = "block";
+        header.style.display = "block";
+        horse.style.display = "none";
+        tryAgain.style.display = "none";
+
+
+
+      })
