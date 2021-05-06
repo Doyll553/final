@@ -21,9 +21,7 @@ let wordChoices = [
   "Uhhhh... CHILEEE... anyway so...",
   "I hate you",
   "Marry Me!",
-  "I'm gonna barf",
-  
-  
+  "I'm gonna barf", 
 ];
 
 function pickRandom(list) {
@@ -56,6 +54,8 @@ let clearDrawing = document.querySelector("#clearDrawing");
 
 let isPainting = false;
 
+let currentColor = "black";
+
 for (let i = 0; i < 100 * 100; i++){
     let newDiv = document.createElement("div");
     newDiv.classList.add("pixel");
@@ -63,13 +63,13 @@ for (let i = 0; i < 100 * 100; i++){
     newDiv.addEventListener("mousedown", 
         function(){
             isPainting = true;
-            newDiv.style.backgroundColor = "black"; //black//
+            newDiv.style.backgroundColor = currentColor; //black//
         });
 
         newDiv.addEventListener("mouseenter", 
         function(){
             if (isPainting){
-                newDiv.style.backgroundColor = "black";
+                newDiv.style.backgroundColor = currentColor;
             }
         });
 
@@ -172,5 +172,26 @@ let isDone = false;
     })
 
 
-      
+    var colors = document.querySelectorAll(".color");
+console.log(colors)
+  
+    var myFunction = function(e) {
 
+    // var attribute = this.getAttribute("data-myattribute");
+    // alert(attribute);
+};
+ 
+Array.from(colors).forEach(function(element){
+    element.addEventListener('click', function(e){
+        var newColor = e.target.id;
+        console.log(newColor);
+
+        var buttonElement = e.target;
+
+        console.log(buttonElement.style.backgroundColor);
+        console.log(buttonElement);
+
+        currentColor = getComputedStyle(buttonElement).backgroundColor;
+;
+  });
+});
