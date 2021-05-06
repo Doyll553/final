@@ -6,6 +6,15 @@
     <title>Feed the Horse</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script>
+      var neigh = new Audio ();
+      neigh.src = "img/neigh.mp3";
+      var dinner = new Audio ();
+      dinner.src = "img/dinner.mp3";
+      var redo = new Audio ();
+      redo.src = "img/tryagain.mp3";
+
+    </script>
   </head>
   <body>
     <div id="text">
@@ -29,13 +38,13 @@
           <button class = "color" id = "eleven"></button>
           <button class = "color" id = "twelve"></button>
           <br>
-        <button id="clearDrawing">Clear Drawing</button>
+        <button id="clearDrawing" onmousedown="neigh.play()">Clear Drawing</button>
       </div>
       </div>
       <div class = "grid-container"></div>
       <img class = "horse" src="img/horse.png" alt="pixel horse">
-      <button class = "feed_him">Feed him.</button>
-      <button class = "try_again">Try Again.</button>
+      <button class = "feed_him" onmousedown="dinner.play()">Feed him.</button>
+      <button class = "try_again" onmousedown="redo.play()">Try Again.</button>
     </div>
     <script src="script.js"></script>
   </body>

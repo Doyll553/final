@@ -16,18 +16,12 @@ function pickRandom(list) {
 }
 
 function randomizeChoices(){
-  // Chooses a random word out of the adjectiveOneChoices array, with the help of the pickRandom() function:
   let randomWord1 = pickRandom(wordChoices);
-
-  //Queries for the span that corresponds to word 1:
   let word1 = document.querySelector("#word1");
-
-  //Changes the inside of that span to word inside randomWord1
   word1.innerHTML = randomWord1;
 
 }
 let button = document.querySelector(".feed_him");
-//This actually links the randomizeChoices() function to the buutton when you click it
 button.addEventListener("click", randomizeChoices);
 
 
@@ -154,7 +148,7 @@ let isDone = false;
         container.style.transform = "scale(1)";
         container.style.boxShadow = "";
 
-        newDiv.style.background = "rgba(0,0,0,0)";
+        newDiv.style.background = "white";
         container.appendChild(newDiv);
 
 
