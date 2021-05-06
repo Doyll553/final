@@ -7,6 +7,22 @@ let wordChoices = [
   "DISGUSTING",
   "I WANT A REFUND",
   "YUMMY",
+  "What did you just feed me?",
+  "ur going to prison for this.",
+  "Where did you learn to cook?",
+  "this is legitimatley awful bruh.",
+  "Electric Chair.",
+  "What in Tarnation",
+  "this is amaze-ballzzzz",
+  "Down with the Bourgeois!",
+  "Try Harder",
+  "This is a case for the FBI",
+  "I'm going back to my stable",
+  "Uhhhh... CHILEEE... anyway so...",
+  "I hate you",
+  "Marry Me!",
+  "I'm gonna barf",
+  
   
 ];
 
