@@ -151,22 +151,26 @@ let isDone = false;
     })
 
     tryAgain.addEventListener("click",
-      function(){
+    function(){
+            feedHim.style.display= "block";
+            toolBox.style.display = "block";
+            headerTwo.style.display = "block";
+            header.style.display = "none";
+            horse.style.display = "none";
+            tryAgain.style.display = "none";
+            // define pixel as class name pixel
+            var pixel = document.getElementsByClassName('pixel');
+            // loop through every pixel, give a background of transparent.
+            for(var i=0; i< pixel.length; i++){
+            pixel[i].style.backgroundColor = "rgba(0,0,0,0)";
+            }
+            container.style.backgroundColor = "white";
+            container.style.transform = "scale(1)";
+            container.style.boxShadow = "";
+            newDiv.style.background = "rgba(0,0,0,0)";
+            container.appendChild(newDiv);
+    })
 
-        feedHim.style.display= "block";
-        toolBox.style.display = "block";
-        headerTwo.style.display = "block";
-        header.style.display = "none";
-        horse.style.display = "none";
-        tryAgain.style.display = "none";
 
-        container.style.backgroundColor = "white";
-        container.style.transform = "scale(1)";
-        container.style.boxShadow = "";
-
-        newDiv.style.background = "white";
-        container.appendChild(newDiv);
-
-
-      })
+      
 
