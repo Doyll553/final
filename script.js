@@ -1,5 +1,40 @@
 console.log("hi");
 
+//randomized words//
+
+let wordChoices = [
+  "EW",
+  "DISGUSTING",
+  "I WANT A REFUND",
+  "YUMMY",
+  
+];
+
+function pickRandom(list) {
+  let index = Math.floor(Math.random()* list.length)
+  return list[index];
+}
+
+function randomizeChoices(){
+  // Chooses a random word out of the adjectiveOneChoices array, with the help of the pickRandom() function:
+  let randomWord1 = pickRandom(wordChoices);
+
+  //Queries for the span that corresponds to word 1:
+  let word1 = document.querySelector("#word1");
+
+  //Changes the inside of that span to word inside randomWord1
+  word1.innerHTML = randomWord1;
+
+}
+let button = document.querySelector(".feed_him");
+//This actually links the randomizeChoices() function to the buutton when you click it
+button.addEventListener("click", randomizeChoices);
+
+
+
+
+
+
 //finding grid container//
 
 let container = document.querySelector(".grid-container");
@@ -18,7 +53,7 @@ for (let i = 0; i < 100 * 100; i++){
     newDiv.addEventListener("mousedown", 
         function(){
             isPainting = true;
-            newDiv.style.backgroundColor = "black";
+            newDiv.style.backgroundColor = "black"; //black//
         });
 
         newDiv.addEventListener("mouseenter", 
@@ -84,6 +119,8 @@ let toolBox = document.querySelector("#mydivheader");
 
 let header = document.querySelector(".header");
 
+let headerTwo = document.querySelector(".header2");
+
 let horse = document.querySelector(".horse");
 
 let isDone = false;
@@ -93,23 +130,33 @@ let isDone = false;
       feedHim.style.display= "none";
       tryAgain.style.display = "block";
       toolBox.style.display = "none";
-      header.style.display = "none";
+      header.style.display = "block";
       horse.style.display = "block";
+      headerTwo.style.display = "none";
 
       container.style.backgroundColor = "rgba(0,0,0,0)";
 
-      container.style.transform = "scale(0.15) translate(-1800px, 820px)";
+      container.style.transform = "scale(0.15) translate(-1900px, -50px)";
       container.style.boxShadow = "none";
     })
 
     tryAgain.addEventListener("click",
       function(){
+
         feedHim.style.display= "block";
         toolBox.style.display = "block";
-        header.style.display = "block";
+        headerTwo.style.display = "block";
+        header.style.display = "none";
         horse.style.display = "none";
         tryAgain.style.display = "none";
 
+        container.style.backgroundColor = "white";
+        container.style.transform = "scale(1)";
+        container.style.boxShadow = "";
+
+        newDiv.style.background = "rgba(0,0,0,0)";
+        container.appendChild(newDiv);
 
 
       })
+

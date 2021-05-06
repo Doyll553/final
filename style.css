@@ -22,13 +22,14 @@
 }
 #mydivheader {
   font-family: NeueBit;
-  font-size: 50px;
+  font-size: 80px;
   padding: 10px;
   cursor: move;
   z-index: 10;
   background-color: #D1CECE;
   color: black;
   border: 2px solid black;
+
 }
 body {
     background-color: #D6D6D6;
@@ -56,7 +57,7 @@ button{
 }
 #clearDrawing{
   box-shadow: 2px 2px 2px grey;
-  font-size: 20px;
+  font-size: 50px;
   font-family: NeueBit;
 }
 .grid-container{
@@ -70,7 +71,7 @@ button{
   grid-template-rows: repeat(47, 1fr);
 }
 .horse{
-  margin-top: -250px;
+  margin-top: -395px;
   width: 40%;
   display: block;
   margin-left: auto;
@@ -85,10 +86,74 @@ button{
   display: none;
 }
 .feed_him{
-  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
+#word1{
+  font-weight: normal;
+	font-style: normal;
+    font-family: Mondwest;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.header2{
+  font-weight: normal;
+	font-style: normal;
+    font-family: Mondwest;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: none;
+}
+.color{
+  background-color: #4CAF50; 
+  border: none;
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
+  /* box-shadow: none; */
+  position: static;
+}
+#one{
+  background-color: #DECE3E;
+}
+#two{
+  background-color: #DE8B3E;
+}
+#three{
+  background-color: #DE3E3E;
+}
+#four{
+  background-color: #FFA4A4;
+}
+#five{
+  background-color: #B43EDE;
+}
+#six{
+  background-color: #3E4EDE;
+}
+#seven{
+  background-color: #3EC1DE;
+}
+#eight{
+  background-color: #84DE3E;
+}
+#nine{
+  background-color: #177C33;
+}
+#ten{
+  background-color: #66482D;
+}
+#eleven{
+  background-color: #963600;
+}
+#twelve{
+  background-color: #000000;
+}
 /* citations
 
 https://www.w3schools.com/css/css3_shadows_box.asp
